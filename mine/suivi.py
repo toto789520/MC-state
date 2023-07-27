@@ -1,9 +1,10 @@
 import base64
 import mcstatus
 
-mcJ = mcstatus.JavaServer
 
 def main(__x):
+    import mcstatus
+    mcJ = mcstatus.JavaServer
     serveur = mcJ.lookup(__x)
     serveurstatus = serveur.status()
     return(serveurstatus)
@@ -28,4 +29,3 @@ def favicon(__x):
     __imgdoc.write(__img)
     __imgdoc.close()
     return(__x.icon)
-
